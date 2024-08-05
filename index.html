@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapiito Camera Access</title>
+</head>
+<body>
+    <h1>Click the button to access the camera</h1>
+    <button onclick="startCamera()">Start Camera</button>
+    <video id="video" width="640" height="480" autoplay></video>
+
+    <script>
+        function startCamera() {
+            const video = document.getElementById('video');
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then((stream) => {
+                    video.srcObject = stream;
+                })
+                .catch((err) => {
+                    console.error('Error accessing the camera: ', err);
+                });
+        }
+    </script>
+</body>
+</html>
