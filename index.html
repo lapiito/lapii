@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lapiito Camera Access</title>
+    <title>Educational Camera Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        video {
+            margin-top: 20px;
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Click the button to access the camera</h1>
+    <h1>Click the button to access the camera for educational purposes</h1>
     <button onclick="startCamera()">Start Camera</button>
     <video id="video" width="640" height="480" autoplay></video>
 
